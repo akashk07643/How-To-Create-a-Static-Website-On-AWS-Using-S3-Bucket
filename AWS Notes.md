@@ -34,8 +34,7 @@ Questions related S3 Bucket:-
 -> Versioning allows you to keep multiple versions of an object in the same bucket to protect against accidental deletes or overwrites.
 
 5. What is S3 Static Website Hosting?
-
-S3 can host static websites (HTML, CSS, JS files) by enabling Static Website Hosting in bucket properties.
+->S3 can host static websites (HTML, CSS, JS files) by enabling Static Website Hosting in bucket properties.
 
 6. What is S3 Storage Class?
 -> Storage classes define the cost and availability of stored data.
