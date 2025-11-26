@@ -40,11 +40,10 @@ Questions related S3 Bucket:-
 -> Storage classes define the cost and availability of stored data.
 
 7. What are S3 Access Policies?
-
-Ans -> Policies that control access:
-->Bucket Policy
-->IAM Policy
-->ACL (Access Control List)
+->1. Policies that control access:
+, 2. Bucket Policy
+, 3. IAM Policy
+, 4. ACL (Access Control List)
 
 8. Can we make an S3 bucket public?
 -> Yes — by modifying the bucket policy and disabling Block Public Access.
