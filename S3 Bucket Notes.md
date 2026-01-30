@@ -1,7 +1,7 @@
 #### **Host a static website on s3 bucket:-**
 
 * Create a S3 Bucket
-* Ppen the Bucket
+* Open the Bucket
 * Upload all the files required for static website
 * Click "Close"
 * go to Properties
@@ -17,7 +17,70 @@
 * Go to object and Click html copy the link and paste it in google;
 * DONE 
 
+Uplaod a File using EC2 Instance :-
 
+## **STEP 1:S3 Bucket Create **
+
+AWS Console → S3
+Create bucket
+Bucket name likho:
+company-upload-demo-akash
+Region: Mumbai (ya koi bhi)
+Block ALL public access = off
+Create bucket
+
+## STEP 2: IAM ROLE BANAO
+AWS Console → IAM
+Left side → Roles
+Create role
+Trusted entity:
+Select: AWS service
+Service: EC2
+Permission select karo:AmazonS3FullAccess
+Role name:
+EC2-S3-Upload-Role
+Create role
+
+## STEP 3: EC2 INSTANCE LAUNCH KARO
+
+->AWS Console → EC2
+->Launch instance
+->Name: (kuch bhi)
+->company-server
+->AMI select karo
+->Amazon Linux 2023
+->Architecture: 64-bit (x86)
+->Instance type
+->t2.micro ya t3.micro
+->Key pair
+->Existing key pair select karo (ya create karo)
+->Advanced details (IMPORTANT)
+->IAM instance profile
+->Select karo:EC2-S3-Upload-Role
+->Launch instance
+
+## STEP 4: EC2 ME CONNECT KARO
+
+->EC2 → Instances
+->Apni instance select karo
+->Connect
+->EC2 Instance Connect / SSH
+->Terminal open ho jaayega
+
+## STEP 5: EC2 KE ANDAR FILE BANAO
+->echo "Hello from company server" > demo.txt
+
+## STEP 6: FILE S3 ME UPLOAD KARO
+->aws s3 cp demo.txt s3://company-upload-demo-akash/
+
+## YAAD RAKHNE KA FORMULA
+S3 (PRIVATE)
+↑
+IAM ROLE
+↑
+EC2
+↑
+Tum
 
 Questions related S3 Bucket:-
 
